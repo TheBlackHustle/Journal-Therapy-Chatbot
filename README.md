@@ -1,6 +1,9 @@
 # Journal-Therapy-Chatbot
 This project implements a journal therapy chatbot powered by artificial intelligence (AI). The chatbot utilizes the Chroma vector database for analyzing and processing journal entries to provide feedback and advice based on user queries.
 
+AiChatbot.py is the file containing the Vector DB and chatbot.
+JournalWriter.Py is the script to write all the journals
+
 
 # Features
 User Input: The chatbot prompts the user for input, allowing them to express their thoughts, feelings, or concerns.
