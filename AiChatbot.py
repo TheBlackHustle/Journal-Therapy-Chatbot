@@ -10,7 +10,7 @@ from langchain.llms import OpenAI
 from langchain.chains import LLMChain
 from langchain.memory import ConversationBufferMemory
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""
 
 # Specify the folder containing your journal entries
 folder_path = '/Users/devinjackson/Documents/PycharmProjects/Journal Project/Entries/'
@@ -32,7 +32,7 @@ docs = text_splitter.split_documents(documents)
 embeddings = OpenAIEmbeddings()
 db = Chroma.from_documents(docs, embeddings)
 
-llm = OpenAI(model_name="gpt-4", temperature=0.3, openai_api_key="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")
+llm = OpenAI(model_name="gpt-4", temperature=0.3, openai_api_key="")
 prompt = PromptTemplate(
     input_variables=["user_query"],
     template="Create a set of keywords based on the user query: '{user_query}' to perform a search on the journal dataset in Chroma DB.",
@@ -67,7 +67,7 @@ prompt = PromptTemplate(
 
 memory = ConversationBufferMemory(memory_key="chat_history")
 llm_chain = LLMChain(
-    llm=OpenAI(model_name="gpt-4", temperature=0.8, openai_api_key="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"),
+    llm=OpenAI(model_name="gpt-4", temperature=0.8, openai_api_key=""),
     prompt=prompt,
     verbose=False,
     memory=memory,
