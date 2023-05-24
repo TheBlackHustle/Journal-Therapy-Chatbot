@@ -10,7 +10,7 @@ from langchain.llms import OpenAI
 from langchain.chains import LLMChain
 from langchain.memory import ConversationBufferMemory
 
-os.environ["OPENAI_API_KEY"] = ""
+os.environ["OPENAI_API_KEY"] = " "
 
 # Specify the folder containing your journal entries
 folder_path = '/Users/devinjackson/Documents/PycharmProjects/Journal Project/Entries/'
